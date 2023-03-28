@@ -93,8 +93,8 @@ def is_deterministic(Q, Sigma, delta):
 ## Conclusions / Screenshots / Results
 * Results for the Grammar code with the Chomsky Hierarchy
 
-![alt text](images/img1.png)
+![alt text](images/img_1.png)
 
 * Results for the FA code with the determine the type of FA function.
 
-![alt text](images/img2.png)
+![alt text](images/img_2.png)
