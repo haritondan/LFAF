@@ -36,11 +36,11 @@
 * Since I left comments on my code I didn't left any comments here.
 
   For the conversion from NDFA TO DFA implementation, I tried to implement it but I did get a lot of error the code in
-  in the /test2.py file
+  in the /NFAtoDFA.py file
 
 
 
-* Grammar Code snippets with Chomsky hierarchy
+* The given code defines a function chomsky_hierarchy that checks whether a grammar belongs to Type 3 (regular) in Chomsky's hierarchy of grammars. It examines the grammar's productions and verifies that they satisfy certain conditions for being regular, such as the length of productions, the types of symbols used, and the presence of epsilon (empty) productions. If all productions meet these conditions, the function returns "Type 3 (regular)" indicating that the grammar is regular.
 ```
 def chomsky_hierarchy(grammar):
     # Check if the grammar is Type 3 (regular)
@@ -49,7 +49,7 @@ def chomsky_hierarchy(grammar):
            production in grammar[symbol]):
         return "Type 3 (regular)"
 ```
-* FA TO RG Code snippets
+* The given code defines a function fa_to_rg that converts a finite automaton (FA) into a regular grammar (RG). It iterates over the FA components and builds productions for the RG. It handles productions for the starting state separately and then adds productions for the remaining states. The function modifies the productions dictionary and nonterminals set to represent the RG.
 ```
 def fa_to_rg(Q, Sigma, delta, q0, F):
     # Step 1: Initialize the productions and nonterminals
@@ -80,7 +80,9 @@ def fa_to_rg(Q, Sigma, delta, q0, F):
                 productions[q].append(symbol + next_state)
 ```
 
-* FA (DFA OR NDFA) function 
+
+* The given code defines a function is_deterministic that checks if a finite automaton (FA) is deterministic. The function takes as input the set of states (Q), alphabet (Sigma), and transition function (delta).
+The code iterates over each state in Q and checks the next states reachable from that state for each symbol in Sigma. If there are duplicate next states for any symbol, indicating non-determinism, the function returns False. Otherwise, if all next states for each symbol are unique, it returns True, indicating that the FA is deterministic
 ```
 def is_deterministic(Q, Sigma, delta):
     for state in Q:
@@ -93,8 +95,31 @@ def is_deterministic(Q, Sigma, delta):
 ## Conclusions / Screenshots / Results
 * Results for the Grammar code with the Chomsky Hierarchy
 
-![alt text](images/img_1.png)
+```
+dada
+bbbdab
+db
+db
+bbbbdb
+Type 3 (regular)
+```
 
 * Results for the FA code with the determine the type of FA function.
 
-![alt text](images/img_2.png)
+```
+Regular grammar:
+S' -> bS
+S' -> aS
+q3 -> aS'
+q3 -> bS'
+q0 -> bS
+q0 -> bq0
+q0 -> aq1
+q0 -> aS
+q1 -> aq2
+q1 -> bq1
+q2 -> aq2
+q2 -> bS'
+The FA is non-deterministic
+```
+

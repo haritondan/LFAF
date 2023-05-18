@@ -91,11 +91,4 @@ class Lexer(object):
 
         return Token(EOF, None)
 
-text = '3 + 4 * 2 / ( 1 - 5 )'
-lexer = Lexer(text)
 
-while True:
-    token = lexer.get_next_token()
-    if token.type == EOF:
-        break
-    print(token)

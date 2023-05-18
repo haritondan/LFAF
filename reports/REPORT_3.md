@@ -86,7 +86,19 @@ For more detailed explanations, refer to the documented source code.
 
 ## Screenshots
 
-![Terminal output](images/img__1.png)
+```
+Token(INTEGER, 3)
+Token(PLUS, '+')
+Token(INTEGER, 4)
+Token(MULTIPLY, '*')
+Token(INTEGER, 2)
+Token(DIVIDE, '/')
+Token(LPAREN, '(')
+Token(INTEGER, 1)
+Token(MINUS, '-')
+Token(INTEGER, 5)
+Token(RPAREN, ')')
+```
 
 ## Conclusions 
 
