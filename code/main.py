@@ -17,7 +17,7 @@ print('\n')
 fa_to_rg(Q, Sigma, delta, q0, F)
 
 # Lab 3-------------------
-from Labs.code.lexer import Lexer, EOF`
+from Labs.code.Lexer.lexer import Lexer, EOF
 print("\n Lab 3")
 text = '3 + 4 * 2 / ( 1 - 5 )'
 lexer = Lexer(text)
